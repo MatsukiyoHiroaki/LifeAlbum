@@ -1,16 +1,16 @@
 <h2>カメラ撮影</h2>
 <br/>
 <input type="file" file-model="imageFile"　multiple/>
-<img ng-if="camera.imageFileSrc" ng-src="{{imageFileSrc}}" style="max-width: 300px"/>
+<img ng-if="imageFileSrc" ng-src="{{imageFileSrc}}" style="max-width: 300px"/>
 <br/>
   <span  class="nullable">
   <h5>イベント</h5>
-  <select ng-model="camera.teikei" ng-options="event.name for event in events" style="width: 100px">
+  <select ng-model="teikei" ng-options="event.name for event in events" style="width: 100px">
       <option value=""></option>
   </select>
   </span>
 <br/>
 <br/>
 <div >
-  <button ng-click="camera.onclick()">登録</button>
+  <button ng-click="onclick()">登録</button>
 </div>
