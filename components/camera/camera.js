@@ -22,20 +22,21 @@
     console.log('CameraController Constructor');
   }
 
-  // function CameraDirective($parse, $scope) {
-  //   console.log('CameraDirective Constructor');
-  //   return {
-  //     restrict: 'A',
-  //     link: function (scope, element, attrs) {
-  //       var model = $parse(attrs.fileModel);
-  //       element.bind('change', function () {
-  //         scope.$apply(function () {
-  //           model.assign(scope, element[0].files[0]);
-  //         });
-  //       });
-  //     }
-  //   };
-  // }
+  function CameraDirective($parse, $scope) {
+    console.log('CameraDirective Constructor');
+    return {
+      restrict: 'A',
+      link: function (scope, element, attrs) {
+        var model = $parse(attrs.fileModel);
+        element.bind('change', function () {
+          scope.$apply(function () {
+            model.assign(scope, element[0].files[0]);
+          });
+        });
+      }
+    };
+  }
+
   /**
    * The controller activate makes it convenient to re-use the logic
    * for a refresh for the controller/View, keeps the logic together.
