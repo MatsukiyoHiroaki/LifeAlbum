@@ -9,7 +9,7 @@
   var app = angular.module('LifeAlbum.components.camera', ['firebase']);
   app.controller('CameraController', CameraController);
   app.directive('fileModel', CameraDirective);
-  CameraController.$inject = ['$firebaseArray'];
+  CameraController.$inject = ['$firebaseArray', '$scope'];
   CameraDirective.$inject = ['$parse'];
 
   /**
