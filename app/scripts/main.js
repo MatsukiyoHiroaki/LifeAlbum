@@ -12,15 +12,17 @@
       'LifeAlbum.config',
       'LifeAlbum.components.home',
       'LifeAlbum.components.about',
-      'LifeAlbum.components.contact'
+      'LifeAlbum.components.contact',
+      'LifeAlbum.components.camera'
     ])
     .controller('AppController', AppController);
 
   AppController.$routeConfig = [
-    {path: '/',       redirectTo: '/home'},
+    {path: '/',       redirectTo: '/camera'},
     {path: '/home',    component: 'home'},
     {path: '/about',   component: 'about'},
-    {path: '/contact', component: 'contact'}
+    {path: '/contact', component: 'contact'},
+    {path: '/camera', component: 'camera'}
   ];
 
   AppController.$inject = [];
