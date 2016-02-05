@@ -7,7 +7,7 @@
   'use strict';
 
   angular
-    .module('LifeAlbum.components.calendar', [])
+    .module('LifeAlbum.components.calendar', ['ui.calendar'])
     .controller('CalendarController', CalendarController);
 
   CalendarController.$inject = [];
