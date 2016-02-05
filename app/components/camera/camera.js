@@ -68,8 +68,10 @@
         };
         reader.readAsDataURL(imageFile);
         /*firebaseに写真登録*/
+        var count = 1;
         $scope.onclick = function() {
           console.log(imagedata);
+          $scope.count = count++;
           $scope.messages.$add({
             'img': reader.result, /*写真*/
             'coment': $scope.teikei.name,
