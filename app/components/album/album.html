@@ -1,1 +1,31 @@
-<div>album.html</div>
+<h2>イベント</h2>
+
+<div class="nav nav-tabs" >
+  <li role="presentation"><a ng-click="setActiveTab(1)">出産</a></li>
+  <li role="presentation"><a ng-click="setActiveTab(2)">お宮参り</a></li>
+  <li role="presentation"><a ng-click="setActiveTab(3)">１カ月検診</a></li>
+</div>
+
+<div class="tabs" file-model="imageFile">
+  <div ng-if="activeTab == 1">
+    <div ng-repeat = "message in messages">
+      <span ng-if="message.code == 1">
+        <img src="{{message.img}}" style="max-width: 300px"></img>
+      </span>
+    </div>
+  </div>
+  <div ng-if="activeTab == 2">
+    <div ng-repeat = "message in messages">
+      <span ng-if="message.code == 2">
+        <img src="{{message.img}}" style="max-width: 300px"></img>
+      </span>
+    </div>
+  </div>
+  <div ng-if="activeTab == 3">
+    <div ng-repeat = "message in messages">
+      <span ng-if="message.code == 3">
+        <img src="{{message.img}}" style="max-width: 300px"></img>
+      </span>
+    </div>
+  </div>
+</div>
