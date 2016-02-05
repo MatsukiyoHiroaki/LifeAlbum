@@ -13,6 +13,7 @@
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/flexslider/flexslider.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -30,8 +31,6 @@
 
       <div ng-viewport></div>
 
-      <div ng-include="'components/footer/footer.html'"></div>
-
     </div>
 
     <!-- build:js(.) scripts/vendor.js -->
@@ -42,6 +41,7 @@
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/firebase/firebase.js"></script>
     <script src="bower_components/angularfire/dist/angularfire.js"></script>
+    <script src="bower_components/flexslider/jquery.flexslider.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -77,6 +77,7 @@
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <!-- injector:js -->
         <script src="components/about/about.js"></script>
+        <script src="components/album/album.js"></script>
         <script src="components/calendar/calendar.js"></script>
         <script src="components/camera/camera.js"></script>
         <script src="components/contact/contact.js"></script>
@@ -84,6 +85,8 @@
         <script src="components/initial/initial.js"></script>
         <script src="components/login/login.js"></script>
         <script src="components/menu/menu.js"></script>
+        <script src="components/slideshow/slideshow.js"></script>
+        <script src="components/watchmenu/watchmenu.js"></script>
         <script src="scripts/config.js"></script>
         <script src="service/gruntfiles/gruntfiles.js"></script>
         <!-- endinjector -->

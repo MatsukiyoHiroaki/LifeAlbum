@@ -58,6 +58,7 @@
     "angular": false,
     "$": false,
     "it": true,
+    "Firebase": false,
     "describe": true,
     "beforeEach": true,
     "afterEach": true,
