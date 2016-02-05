@@ -7,10 +7,10 @@
   'use strict';
 
   angular
-    .module('LifeAlbum.components.slideshow', [])
+    .module('LifeAlbum.components.slideshow', ['firebase'])
     .controller('SlideshowController', SlideshowController);
 
-  SlideshowController.$inject = [];
+  SlideshowController.$inject = ['$firebaseArray', '$rootScope'];
 
   /**
    * SlideshowController
@@ -18,8 +18,10 @@
    * @class SlideshowController
    * @constructor
    */
-  function SlideshowController() {
+  function SlideshowController($firebaseArray, $rootScope) {
     console.log('SlideshowController Constructor');
+    this.$firebaseArray = $firebaseArray;
+    this.$rootScope = $rootScope;
   }
 
   /**
@@ -31,6 +33,8 @@
   SlideshowController.prototype.activate = function() {
     console.log('SlideshowController activate Method');
     vm = this;
+    var ref = new Firebase('https://fiery-torch-4495.firebaseio.com/');
+    vm.messages = vm.$firebaseArray(ref);
   };
 
   /**
